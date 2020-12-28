@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Source+Code+Pro:wght@200&family=Staatliches&family=Unica+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+button
+{
+    font-family: 'IBM Plex Mono', monospace;
+    cursor: pointer;
+}
+.slide1
+{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    font-family: 'Oxygen Mono', monospace;
+    color:white;
+    margin:10%;
+    text-shadow: 1px 1px 1px black;
+}
+.title
+{
+    display:flex;
+}
+.title > div
+{
+    text-shadow: none;
+    background:linear-gradient(147deg, #FFE53B 0%, #FF2525 74%) repeat 0 0 transparent;
+    width:100%;
+    height:190px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+.slide2
+{
+    margin-top: 4%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:left;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+}
+.slide2 > h1
+{
+    font-size:3rem;
+    text-align: left;
+}
+.slide2 > h2
+{
+    font-size:1.5rem;
+    text-align: left;
+}
+.slide2 > button
+{
+    margin-top:5%;
+    margin-right:75%;
+    align-self: center;
+    width:25%;
+    color:#ff009d;
+    font-size:1.5rem;
+    text-decoration: none;
+    overflow:hidden;
+    letter-spacing: 4px;
+    transition:0.5s ease;
+}
+.slide2 > button:hover
+{
+    color:#002897;
+    background-color: #00FFFB;
+    box-shadow: 0px 0px 5px #00FFFB,
+                0px 0px 25px #00FFFB,
+                0px 0px 50px  #00FFFB,
+                0px 0px 200px #00FFFB;
+    border:2px solid yellow;
+}
+.slide2 > h2 > span
+{
+    color:pink;
+    text-shadow: 1px 1px 1px red;
+    transition:0.4s ease;
+    cursor:pointer;
+}
+.slide2 > h2 > span:hover
+{
+    color:red;
+    text-shadow:1px 1px 1px blueviolet;
+}
+.flex-header
+{
+    display:flex;
+    font-weight:500px;
+    margin-top:10%;
+    margin-bottom:2%;
+    font-family: 'Staatliches', cursive;
+    letter-spacing:4px;
+    font-size:4rem;
+}
+.flex-header > div
+{
+    margin:1%;
+}
+.slider
+{
+    display:flex;
+    margin:4%;
+    margin-top:5%;
+}
+.slider > img
+{
+    width:30%;
+    height:25%;
+    margin:2%;
+    margin-top:10%;
+    border-radius:10px;
+}
+.or
+{
+    font-family: 'Unica One', cursive;
+    font-size:6rem;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+    margin-top:10%;
+    text-align: center;
+}
+.slide3
+{
+    margin-top: 4%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:left;
+    color:white;
+    text-shadow: 1px 1px 1px black;
+}
+.slide3 > h1
+{
+    font-size:3rem;
+    text-align: left;
+}
+.slide3 > h2
+{
+    font-size:1.5rem;
+    text-align: left;
+}
+.slider1
+{
+    display:flex;
+    margin:5%;
+}
+.slider1 > img
+{
+    width:23%;
+    height:20%;
+    margin:2%;
+    margin-top:10%;
+    border-radius:10px;
+}
+.slide3 > button
+{
+    margin-top:5%;
+    margin-right:75%;
+    align-self: center;
+    width:25%;
+    color:#ff0000;
+    font-size:1.5rem;
+    text-decoration: none;
+    overflow:hidden;
+    letter-spacing: 4px;
+    transition:0.5s ease;
+}
+.slide3 > button:hover
+{
+    color:#002897;
+    background-color: #ffee00;
+    box-shadow: 0px 0px 5px #ffee00,
+                0px 0px 25px #ffee00,
+                0px 0px 50px  #ffee00,
+                0px 0px 200px #ffee00;
+    border:2px solid cyan;
+}
+.slide3 > h2 > span
+{
+    color:rgb(255, 0, 85);
+    text-shadow: 1px 1px 1px rgb(177, 255, 31);
+    transition:0.4s ease;
+    cursor:pointer;
+}
+.slide3 > h2 > span:hover
+{
+    color:rgb(177, 255, 31);
+    text-shadow:1px 1px 1px rgb(255, 0, 85);
+}
+.menu
+{
+    display:flex;
+    color:white;
+    align-items:center;
+    justify-content:center;
+    position:fixed;
+    width:100%;
+    height:20%;
+    top:0%;
+    right:0%;
+    z-index:10000;
+}
+.menu > img
+{
+    margin-right:10%;
+    margin-top:-2%;
+}
+.m1
+{
+    margin:4%;
+    font-size:1.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 4px;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.m1:hover
+{
+    color:cyan;
+}
+.m2
+{
+    margin:4%;
+    font-size:1.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 4px;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.m2:hover
+{
+    color:yellow;
+}
+.m3
+{
+    margin:4%;
+    font-size:1.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 4px;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.m3:hover
+{
+    color:rgb(28, 255, 115);
+}
+.m4
+{
+    margin:4%;
+    font-size:1.4rem;
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 4px;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.m4:hover
+{
+    color:#ff1635;
+}
+.m1 > div
+{
+    transform:scaleX(0);
+    height:4px;
+    background:red;
+    opacity:0;
+}
+.m2 > div
+{
+    transform:scaleX(0);
+    height:4px;
+    background:red;
+    opacity:0;
+}
+.m3 > div
+{
+    transform:scaleX(0);
+    height:4px;
+    background:red;
+    opacity:0;
+}
+.m4 > div
+{
+    transform:scaleX(0);
+    height:4px;
+    background:red;
+    opacity:0;
+}
+.sumr
+{
+    display:flex;
+    transition:0.4s ease;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin:10%;
+    margin-top:10%;
+    color:white;
+}
+.sumr > button
+{
+    margin:5%;
+    font-size:1.5rem;
+    background:green;
+    border-radius:5px;
+    transition:0.5s ease;
+    border:2px solid yellow;
+    color:yellow;
+}
+.sumr > button:hover
+{
+    color:green;
+    background:yellow;
+}
+.popup
+{
+    position:fixed;
+    top:30%;
+    right:28%;
+    background:purple;
+    width:40%;
+    border:3px solid yellow;
+    border-radius:10px;
+}
+.popup > img
+{
+    width:7%;
+    height:7%;
+    margin:2%;
+    margin-left:91%;
+    cursor:pointer;
+}
+.popup > ul
+{
+    display:flex;
+    justify-content:space-between;
+}
+.popup > ul > li
+{
+    padding:3%;
+    margin-left:4%;
+    margin-right:4%;
+    margin-bottom:-6%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    list-style: none;
+    transition:0.3s ease;
+    cursor: pointer;
+}
+.popup > button
+{
+    margin:1%;
+    margin-left:40%;
+    background:black;
+    color:white;
+    transition:0.4s ease;
+    border:2px solid white;
+    border-radius:4px;
+}
+.popup > button:hover
+{
+    background:white;
+    color:black;
+    border:2px solid black;
+}
+.popup > ul > li:hover
+{
+    background:red;
+}
+.fl
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    margin:5%;
+    padding:3%;
+    border-radius:3px;
+    color:white;
+    font-family: 'Oxygen Mono', monospace;
+}
+.fl > input
+{
+    margin:5%;
+    margin-left:10%;
+}
+.tl
+{
+    transform:translateX(-30%);
+}
+.txt
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    margin:5%;
+    padding:3%;
+    border-radius:3px;
+    font-family: 'Oxygen Mono', monospace; 
+}
+.txt > textarea
+{
+    width:100%;
+    height:120px;
+}
+
+/* font-family: 'Oxygen Mono', monospace;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Staatliches', cursive;
+font-family: 'Unica One', cursive; */
