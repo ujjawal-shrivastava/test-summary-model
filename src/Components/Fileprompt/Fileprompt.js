@@ -17,12 +17,16 @@ const Fileprompt = ({ HandleToggle, GetData }) => {
     }
 
     const HandleSubmit = () => {
-        if (type === 'text') {
-            console.log(type, ' ', text);
-            return GetData({ data: text, type: type });
-        }
 
+        if (type === 'text' && text.trim()) {
+            return GetData(text);
+        }
         if (type === 'file') {
+
+            if(typeof uploadedFile === undefined || !uploadedFile){
+                return;
+            }
+
             var formData = new FormData();
             formData.append("file", uploadedFile);
             formData.append("language", "eng");
@@ -38,7 +42,9 @@ const Fileprompt = ({ HandleToggle, GetData }) => {
                 },
             })
                 .then(function (response) {
-                    console.log(response.data.ParsedResults[0].ParsedText);
+                    const dataishere=response.data.ParsedResults[0].ParsedText;
+                    console.log(dataishere);
+                    GetData(dataishere);
                     setLoading(false);
                 })
                 .catch(function (error) {
@@ -66,15 +72,17 @@ const Fileprompt = ({ HandleToggle, GetData }) => {
             <img src={Cancel} alt="$" onClick={HandleToggle} />
             <ul>
                 <li
-                    style={{ background: type === 'file' ? 'blue' : 'transparent' }}
+                    style={{ background: type === 'file' ? 'linear-gradient(to bottom, #8A2387 , #E94057 , #F27121 )' 
+                    : 'transparent' }}
                     onClick={() => ChangeType('file')}>File(Pdf/Image)</li>
                 <li className='tl'
-                    style={{ background: type === 'text' ? 'red' : 'transparent' }}
+                    style={{ background: type === 'text' ? 'linear-gradient(to bottom, #8A2387 , #E94057 , #F27121 )' 
+                    : 'transparent' }}
                     onClick={() => ChangeType('text')}>Raw Text</li>
             </ul>
             {
                 type === 'file'
-                    ? <div className="fl" style={{ background: "blue" }}>
+                    ? <div className="fl" style={{ background: "linear-gradient(to top, #8A2387 , #E94057 , #F27121 )" }}>
                         <p>Upload as an Image or as a pdf to get your text scanned.</p>
                         <input type="file" accept="image/jpeg,image/png,application/pdf"
                             onChange={OnUpload} />
@@ -82,7 +90,7 @@ const Fileprompt = ({ HandleToggle, GetData }) => {
                             loading ? <p>Scanning...</p> : ""
                         }
                     </div>
-                    : <div className='txt' style={{ background: "red" }}>
+                    : <div className='txt' style={{ background: "linear-gradient(to top, #8A2387 , #E94057 , #F27121 )" }}>
                         <p>Type your text here!</p>
                         <textarea onChange={HandleChange}></textarea>
                     </div>

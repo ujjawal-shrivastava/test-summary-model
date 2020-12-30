@@ -1,12 +1,18 @@
 import React,{useEffect,useRef} from 'react';
 import { gsap } from 'gsap';
+import { useMediaQuery } from 'react-responsive';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Logo from '../../Images/Logo.png';
+import HamMenu from '../HamMenu/HamMenu';
 import { Link } from 'react-router-dom';
 
 const Menu = ({background}) => {
 
     gsap.registerPlugin(ScrollTrigger);
+
+    const IsWidthReduced=useMediaQuery({
+        query:'(min-width: 750px)'
+    });
 
     const Mainmenu=useRef(null);
     const bar1=useRef(null);
@@ -50,29 +56,26 @@ const Menu = ({background}) => {
     }
 
     return (
-        <div className="menu" ref={Mainmenu}>
+        IsWidthReduced
+        ?(<div className="menu" ref={Mainmenu}>
             <img src={Logo} alt="Logo"/>
             <Link to='/' style={{textDecoration:"none",color:"white",margin:"3%"}}>
-            <h3 className='m1' 
-            onMouseEnter={()=>{EnterHover(bar1,65)}}
-            onMouseLeave={()=>{LeaveHover(bar1)}}>Home<div ref={bar1}></div></h3>
+                <h3 className='m1' 
+                onMouseEnter={()=>{EnterHover(bar1,65)}}
+                onMouseLeave={()=>{LeaveHover(bar1)}}>Home<div ref={bar1}></div></h3>
             </Link>
-            <Link to='/summary' style={{textDecoration:"none",color:"white",margin:"3%"}}>
-            <h3 className='m2' 
-            onMouseEnter={()=>{EnterHover(bar2,120)}}
-            onMouseLeave={()=>{LeaveHover(bar2)}}>Summary<div ref={bar2}></div></h3>
-            </Link>
-            <Link to='/termhunter' style={{textDecoration:"none",color:"white",margin:"3%"}}>
-            <h3 className='m3' 
-            onMouseEnter={()=>{EnterHover(bar3,170)}}
-            onMouseLeave={()=>{LeaveHover(bar3)}}>TermHunter<div ref={bar3}></div></h3>
+            <Link to='/services' style={{textDecoration:"none",color:"white",margin:"3%"}}>
+                <h3 className='m2' 
+                onMouseEnter={()=>{EnterHover(bar2,120)}}
+                onMouseLeave={()=>{LeaveHover(bar2)}}>Services<div ref={bar2}></div></h3>
             </Link>
             <Link to='about' style={{textDecoration:"none",color:"white",margin:"3%"}}>
-            <h3 className='m4' 
-            onMouseEnter={()=>{EnterHover(bar4,80)}}
-            onMouseLeave={()=>{LeaveHover(bar4)}}>About<div ref={bar4}></div></h3>
+                <h3 className='m4' 
+                onMouseEnter={()=>{EnterHover(bar4,80)}}
+                onMouseLeave={()=>{LeaveHover(bar4)}}>About<div ref={bar4}></div></h3>
             </Link>
-        </div>
+        </div>)
+        :<HamMenu/>
     )
 }
 

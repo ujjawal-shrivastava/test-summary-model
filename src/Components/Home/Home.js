@@ -1,5 +1,6 @@
 import React,{useRef,useEffect} from 'react';
 import { gsap } from 'gsap';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AiImage from '../../Images/AiImage/AiImg.jpg';
 import NotesImage from '../../Images/notetaker/note.jpg';
@@ -42,6 +43,11 @@ const Home = ({HandleChange,background}) => {
         //         return HandleChange('black');
         //     }
         // }
+
+        window.onload=()=>{
+            scroll.scrollToTop();
+        }
+
         gsap.from(ref1.current,{
             scale:0.1,
             opacity:0,
@@ -237,7 +243,6 @@ const Home = ({HandleChange,background}) => {
             </h2>
             <button onClick={()=>window.location.href='/summary'}>Show me</button>
         </div>
-
         <img src={AiImage} alt="$" ref={ref9}/>
         </div>
         <div className="slider1">
