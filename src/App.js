@@ -1,8 +1,9 @@
 import React,{useState} from 'react';
 import {Switch,Route} from 'react-router';
 import Home from './Components/Home/Home';
-import Summarize from './Components/Summary/Summarize'; 
+import Services from './Components/Services/Services'; 
 import Menu from './Components/Menu/Menu';
+import About from './Components/About/About';
 
 const App = () => {
 
@@ -17,7 +18,8 @@ const App = () => {
             <Menu />
             <Switch>
                 <Route path='/' exact component={()=>(<Home background={backg} HandleChange={HandleChange}/>)}/>
-                <Route path="/summary" component={Summarize} />
+                <Route path="/services" component={Services} />
+                <Route path='/about' component={About} />
             </Switch>
         </div>
     )

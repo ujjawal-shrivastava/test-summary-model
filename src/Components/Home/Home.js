@@ -1,5 +1,6 @@
 import React,{useRef,useEffect} from 'react';
 import { gsap } from 'gsap';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AiImage from '../../Images/AiImage/AiImg.jpg';
 import NotesImage from '../../Images/notetaker/note.jpg';
@@ -42,6 +43,11 @@ const Home = ({HandleChange,background}) => {
         //         return HandleChange('black');
         //     }
         // }
+
+        window.onload=()=>{
+            scroll.scrollToTop();
+        }
+
         gsap.from(ref1.current,{
             scale:0.1,
             opacity:0,
@@ -235,9 +241,7 @@ const Home = ({HandleChange,background}) => {
                 It's super simple just give us the text you want to summarize and then leave everything
                 to your <span>"BEST FRIEND"</span> A.I to reduce it to for ya!
             </h2>
-            <button onClick={()=>window.location.href='/summary'}>Show me</button>
         </div>
-
         <img src={AiImage} alt="$" ref={ref9}/>
         </div>
         <div className="slider1">
@@ -250,7 +254,7 @@ const Home = ({HandleChange,background}) => {
                 important terminologies with their links for you to read about them. So,get ready to take 
                 your productivity to next level.
             </h2>
-            <button onClick={()=>window.location.href='/termhunter'}>Show me</button>
+            <button onClick={()=>window.location.href='/services'}>Show me</button>
         </div>
         <img src={NotesImage} alt="$" ref={ref14}/>
         </div>

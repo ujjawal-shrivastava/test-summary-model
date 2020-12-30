@@ -1,10 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&family=Source+Code+Pro:wght@200&family=Staatliches&family=Unica+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@600&display=swap');
 button
 {
     font-family: 'IBM Plex Mono', monospace;
     cursor: pointer;
+    font-size:1.5rem;
+}
+@media only screen and (max-width: 750px)
+{
+    .slide1
+    {
+        font-size:1rem;
+        margin:1%;
+    }
+    .slide1 > h2
+    {
+        font-size:1rem;
+    }
+    .title > div
+    {
+        font-size:2rem;
+    }
+    .flex-header
+    {
+        transform:translateY(30%);
+    }
+    .flex-header > div
+    {
+        font-size:2rem;
+    }
+    .menu > img
+    {
+        transform:scale(0.8);
+        margin-left:10%;
+    }
+    .menu
+    {
+        margin-left:5%;
+    }
+    .slider1 > .slide3
+    {
+        margin-left:-3%;
+    }
+    .slider > .slide2 > h1
+    {
+        font-size:1.5rem;
+    }
+    .slider > .slide2 > h2
+    {
+        font-size:1rem;
+    }
+    .slider > .slide2 > button
+    {
+        font-size:0.8rem;
+    }
+    .slider1 > .slide3 > h1
+    {
+        font-size:1.5rem;
+    }
+    .slider1 > .slide3 > h2
+    {
+        font-size:1rem;
+    }
+    .slider1 > .slide3 > button
+    {
+        font-size:0.8rem;
+    }
+    .sumr > h1
+    {
+        font-size:1rem;
+        transform:scale(0.8);
+    }
+    .med
+    {
+        font-size:1rem;
+    }
 }
 .slide1
 {
@@ -63,16 +136,6 @@ button
     overflow:hidden;
     letter-spacing: 4px;
     transition:0.5s ease;
-}
-.slide2 > button:hover
-{
-    color:#002897;
-    background-color: #00FFFB;
-    box-shadow: 0px 0px 5px #00FFFB,
-                0px 0px 25px #00FFFB,
-                0px 0px 50px  #00FFFB,
-                0px 0px 200px #00FFFB;
-    border:2px solid yellow;
 }
 .slide2 > h2 > span
 {
@@ -172,12 +235,12 @@ button
 .slide3 > button:hover
 {
     color:#002897;
-    background-color: #ffee00;
-    box-shadow: 0px 0px 5px #ffee00,
-                0px 0px 25px #ffee00,
-                0px 0px 50px  #ffee00,
-                0px 0px 200px #ffee00;
-    border:2px solid cyan;
+    background-color: #00FFFB;
+    box-shadow: 0px 0px 5px #00FFFB,
+                0px 0px 25px #00FFFB,
+                0px 0px 50px  #00FFFB,
+                0px 0px 200px #00FFFB;
+    border:2px solid yellow;
 }
 .slide3 > h2 > span
 {
@@ -206,7 +269,7 @@ button
 }
 .menu > img
 {
-    margin-right:10%;
+    margin-right:30%;
     margin-top:-2%;
 }
 .m1
@@ -297,10 +360,15 @@ button
     align-items:center;
     justify-content:center;
     margin:10%;
-    margin-top:10%;
+    margin-top:12%;
     color:white;
 }
-.sumr > button
+.sumr > h1
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size:4rem;
+}
+.med
 {
     margin:5%;
     font-size:1.5rem;
@@ -310,7 +378,7 @@ button
     border:2px solid yellow;
     color:yellow;
 }
-.sumr > button:hover
+.med:hover
 {
     color:green;
     background:yellow;
@@ -320,9 +388,11 @@ button
     position:fixed;
     top:30%;
     right:28%;
-    background:purple;
+    background-color: #FA8BFF;
+    background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
     width:40%;
     border:3px solid yellow;
+    color:white;
     border-radius:10px;
 }
 .popup > img
@@ -408,6 +478,403 @@ button
 {
     width:100%;
     height:120px;
+}
+.sumrMainer
+{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    margin-top:12%;
+}
+.sumrMainer > h1
+{
+    margin:6%;
+    margin-left:10%;
+    margin-right:10%;
+}
+.prev
+{
+    margin:2%;
+    width:60%;
+    padding:5%;
+    border-radius:10px;
+    font-family: 'Raleway', sans-serif;
+    font-size:1rem;
+    background-color:black;
+    color:white;
+}
+.butns
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.butns .buts
+{
+    font-size:1.5rem;
+    background:red;
+    color:black;
+    border:2px solid black;
+    margin:2%;
+    border-radius: 5px;
+    transition:0.5 ease;
+}
+.butns .buts:hover
+{
+    background:black;
+    color:red;
+    border:2px solid red;
+}
+.butns .butf
+{
+    font-size:1.5rem;
+    background:cyan;
+    color:purple;
+    border:2px solid purple;
+    margin:2%;
+    border-radius: 5px;
+    transition:0.5 ease;
+}
+.butns .butf:hover
+{
+    background:purple;
+    color:cyan;
+    border:2px solid cyan;
+}
+.Tref
+{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin:5%;
+    color:white;
+    margin-top:10%;
+}
+.Tref > button
+{
+    font-size:1.5rem;
+    background:cyan;
+    color:maroon;
+    border:2px solid maroon;
+    border-radius: 5px;
+    transition:0.5s ease;
+    margin:3%;
+}
+.Tref > button:hover
+{
+    background:maroon;
+    color:cyan;
+    border:2px solid cyan;
+}
+.Treflx
+{
+    display:flex;
+    margin:4%;
+    justify-content:center;
+    align-items:center;
+}
+.Treflx .Treflx1
+{
+    margin:2%;
+    background:#ff009d;
+    color:skyblue;
+    border:2px solid skyblue;
+    transition:0.4s ease;
+    border-radius: 5px;
+}
+.Treflx .Treflx1:hover
+{
+    background:skyblue;
+    color:#ff009d;
+    border:2px solid #ff009d;
+    transition:0.4s ease;
+}
+.Treflx .Treflx2
+{
+    margin:2%;
+    border-radius: 5px;
+    background:orange;
+    color:white;
+    border:2px solid white;
+    transition:0.4s ease;
+}
+.Treflx .Treflx2:hover
+{
+    background:white;
+    color:orange;
+    border:2px solid orange;
+    transition:0.4s ease;
+}
+.Treftxt
+{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    margin-top:12%;
+}
+.Treftxt > h1
+{
+    margin:2%;
+}
+.loader
+{
+    margin:10%;
+    position:fixed;
+    top:20%;
+    transform:scale(2);
+    left:30%;
+}
+.editor
+{
+    width:60%;
+    height:10%;
+    border-radius:5px;
+    background:white;
+    color:black;
+}
+#smz
+{
+    color:cyan;
+    text-shadow:1px 1px 1px red;
+}
+#trm
+{
+    color:red;
+    text-shadow:1px 1px 1px cyan;
+}
+.sumr1
+{
+    display:flex;
+    flex-direction:column;
+    margin:10%;
+    margin-top:4%;
+    color:white;
+    align-items:center;
+    justify-content:center;
+}
+.sumr1 #txts1
+{
+    font-size:2rem;
+}
+.chkbx
+{
+    display:flex;
+    margin-top:2%;
+    margin-left:12%;
+    color:white;
+    align-items:center;
+    justify-content: center;
+}
+.chkbx .chbx1
+{
+    margin:2%;
+    display:flex;
+    width:20%;
+}
+.chkbx .chbx1 h2
+{
+    margin:2%;
+    color:cyan;
+    text-shadow:1px 1px 1px purple;
+}
+.chkbx .chbx1 input
+{
+    margin:3%;
+    margin-top:5%;
+    transform:scale(2);
+    cursor:pointer;
+}
+.chkbx .chbx2
+{
+    margin:3%;
+    display:flex;
+    width:30%;
+}
+.chkbx .chbx2 h2
+{
+    margin:2%;
+    color:red;
+    text-shadow:1px 1px 1px orange;
+}
+.chkbx .chbx2 input
+{
+    margin:2%;
+    margin-top:4%;
+    transform:scale(2);
+    cursor:pointer;
+}
+.prmpt
+{
+    display:flex;
+    flex-direction: column;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    justify-content:center;
+    align-items:center;
+    width:30%;
+    height:60%;
+    position:fixed;
+    top:22%;
+    border-radius:5px;
+    right:35%;
+    z-index:1000;
+    box-shadow: 4px 4px 4px black;
+}
+.prmpt h2
+{
+    color:white;
+    font-size:2rem;
+    margin:2%;
+    text-shadow: 2px 2px 2px black;
+}
+.prmpt button
+{
+    margin:2%;
+    color:yellow;
+    background:red;
+    border:2px solid yellow;
+    border-radius:5px;
+    transition:0.5s ease;
+}
+.prmpt button:hover
+{
+    color:red;
+    background:yellow;
+    border:2px solid red;
+}
+.about-parent
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin:3%;
+}
+.about
+{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    margin:1%;
+    margin-top:10%;
+    color:white;
+    width:98%;
+    overflow:hidden;
+    text-shadow: 2px 2px 2px black;
+    font-family: 'Oxygen Mono', monospace;
+}
+.about > img
+{
+    width:30%;
+    height:30%;
+    margin:4%;
+    border-radius:4px;
+}
+.abt-sec
+{
+    width:100%;
+    overflow:hidden;
+}
+.abt-sec > h1
+{
+    text-align: center;
+    font-size:3rem;
+    font-family: 'Source Code Pro', monospace;
+}
+.refns
+{
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    text-shadow: 2px 2px 2px black;
+    justify-content:left;
+    margin:3%;
+    color:white;
+}
+.refns > h1
+{
+    font-size:3rem;
+    text-decoration: underline;
+}
+.refns > h2
+{
+    font-size:2.5rem;
+}
+.refns > ul
+{
+    margin-left:-5%;
+}
+.refns > ul > li
+{
+    list-style: none;
+    font-size:2rem;
+    display:flex;
+    margin:1%;
+}
+.refns > ul > li > span
+{
+    margin:1%;
+}
+.refns > ul > li > span > a
+{
+    color:cyan;
+    text-shadow: 1px 1px 1px black;
+}
+.summary
+{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin:2%;
+    margin-bottom:4%;
+    color:white;
+    height:100%;
+    padding:10%;
+    text-shadow: 2px 2px 2px black;
+}
+.summary .txtS
+{
+    align-self: center;
+    width:90%;
+    height:500px;
+    word-wrap: break-word;
+    overflow-x: auto;
+    background-color:transparent;
+    border:2px solid yellow;
+    border-radius: 5px;
+    color:white;
+    font-size:2rem;
+    display:flex;
+    flex-direction:column;
+    text-shadow: 2px 2px 2px black;
+}
+.refine
+{
+    display:flex;
+    flex-direction:column;
+    margin:10%;
+    color:white;
+}
+.ref-1
+{
+    display:grid;
+    grid-template-columns:auto auto auto;
+}
+.ref-1 > a
+{
+    background:grey;
+    color:white;
+    font-size:1.4rem;
+    margin:4%;
+    font-family: 'Unica One', cursive;
+    border-radius:5px;
+    text-align:center;
 }
 
 /* font-family: 'Oxygen Mono', monospace;
