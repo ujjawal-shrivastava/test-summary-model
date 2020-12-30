@@ -32,3 +32,4 @@ tqdm==4.55.0
 transformers==2.8.0
 typing-extensions==3.7.4.3
 urllib3==1.26.2
+wikipedia
