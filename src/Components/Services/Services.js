@@ -65,6 +65,16 @@ const Services = () => {
         return str;
     }
 
+    const ReturnTerms=(data)=>{
+        var terms=[];
+        Object.values(data).map((k,v)=>{
+            k.map(item=>{
+                terms.push(item);
+            })
+        })
+        return terms;
+    }
+
     const GetData=(data)=>{
         HandleToggle();
         Cookies.set('textkey',data);
@@ -99,21 +109,18 @@ const Services = () => {
             UpdateLoader(false);
             UpdateResult(true);
             if(response.data.mode==="BOTH"){
-                UpdateResponseData({...responseData,summary:response.data.summary[0]});
-                // Cookies.set('summary',response.data.summary[0]);
-                // UpdateRef(RemoveDuplicate(response.data.terms[0]));
+                UpdateResponseData({refined:ReturnTerms(response.data.terms),summary:ReturnLine(response.data.summary)});
                 UpdateSum(true);
                 UpdateRef(true);
             }
             else{
                 if(response.data.mode==="SUMMARY"){
                     UpdateResponseData({...responseData,summary:ReturnLine(response.data.summary)});
-                    // Cookies.set('summary',response.data.summary[0]);
                     UpdateSum(true);
                 }
                 else{
-                    UpdateResponseData({...responseData,refined:response.data.terms[0]});
-                    // UpdateRef(response.data.terms[0]);
+                    console.log(response.data.terms);
+                    UpdateResponseData({...responseData,refined:ReturnTerms(response.data.terms)});
                     UpdateRef(true);
                 }
             }
@@ -134,12 +141,9 @@ const Services = () => {
     }
 
     const RemoveData=()=>{
-        if(!Cookies.get('textkey') || typeof Cookies.get('textkey') == undefined){
-            return;
-        }
-        Cookies.remove('textkey');
-        Cookies.remove('summary');
-        Cookies.remove('refine');
+        UpdateResult(false);
+        UpdateSum(false);
+        UpdateRef(false);
         Fetch(null);
     }
 
@@ -228,7 +232,7 @@ const Services = () => {
                 </div>
                 :summary
                 ?<Summarizr summaryData={responseData.summary}/>
-                :<TermRefine data={refine} terms={responseData.refined}/>
+                :<TermRefine terms={responseData.refined}/>
                 :null
             }
         </div>
